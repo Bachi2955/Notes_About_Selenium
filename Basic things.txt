@@ -1,0 +1,788 @@
+Body of Test Case:
+
+1. TC_ID
+2. Precondition
+3. Test Case Description
+4. Test Steps
+5. Test Data
+6. Expected Result
+7. Actual Result
+8. Status 
+9. Bug_ID
+10. Executed By
+11. Executed Date
+
+
+Drawback's of manual testing
+-> If we want to do Regression Testing frequently then  it is not possilble with manual testing.
+-> Huge nummber of resources are required.
+-> Very Time Consuming.
+-> Expensive
+-> Repeatable tasks are not possible.
+-> Sometimes not effecient.
+
+
+SOA(Service Oriented Architecture) -  To communicate between Heterogenous applications
+-> Provides loosely coupled suit of services over network
+->Communicate using service and message
+->Service - Bussiness Logic code
+->Message- The data to be transfered
+->CORBA(Common Request Broker Architecture) To communicate between Heterogenous applications (Platform Independency)
+->COM (Component object Model) (Platform Independency)
+->DCOM (Dynamic Component object Model) (Platform Independency)
+->Remoting (Platform Independency)
+->Web Services
+->Windows Communication Foundation(WCF) (combination of webservices+ Microsoft message queing + Windows Service Enhancement + Remoting)
+SOAP(Simple Object Access Protocol) - 
+1) SOAP Envelope
+2) SOAP Header
+3) SOAP Body
+4) SOAP Fault
+
+SOAP Architecture - 
+<XML Version=1.0>
+<SOAP Envelope>
+<SOAP Header>
+</SOAP Header>
+<SOAP Body>
+<Empid> </Empid>
+</SOAP Body>
+<SOAP Fault>
+</SOAP Fault>
+</SOAP Envelope>
+
+-> SOAP Architecture supports Http, Udp, Tcp
+-> SOAP supports HTML
+SOAP Header - Type of application, Authetications performed in this application
+SOAP Body - Has original data
+Webservices -
+-> Webservices is B2B functionality
+-> It is logical encapsulation of data
+
+Web service architecture - Collection of classes so that they can be used over internet
+1) Client geneartes proxy (object) with the help of Webservice
+2) Client geneartes instance for proxy. Instance (Client) invokes the methods and handle it to network (XML webservice)
+3) With the help to serilization (Conversion of object form into SOAP form) XML webservice will convert this message into SOAP Envelope
+4) Deserialization(Conversion of SOAP form into object form)  happens  in this step
+5)Webservices will execute all methods
+6) Serilization happens again
+7) Deserialization is done and result is handled to client
+
+Feature of webservice -
+
+i) WSDL (Web Services Description Languages) - 
+
+1) Information about Message
+2) Methods used 
+3) URL's 
+4) Properties ans datatypes
+
+ii) UDDI (Universal Description Discovery and Integration) - It registers all the webservice and maps all the webservices
+ 
+ iii) .discofile - XML information part (SOAP requests going to URL)
+ 
+ 
+ OOPS -
+ 
+ 
+ OOPS Concepts -
+
+
+Access Modifiers - Describes as the scope of accessibility of an Object and its members. All C# types and type members have an accessibility level . 
+				   We can control the scope of the member object of a class using access specifiers.
+				   
+				   public: The scope of the accessibility is inside class as well as outside. The type or member can be accessed by any other code in the same 
+				   assembly or another assembly that references it.
+				   
+				   private: The scope of the accessibility is limited only inside the classes or struct in which they are declared. The private members cannot 
+				   be accessed outside the class and it is the least permissive access level.
+				   
+				   protected: The scope of accessibility is limited within the class or struct and the class derived (Inherited )from this class.
+				   
+				   internal: The internal access modifiers can access within the program that contain its declarations and also access within the 
+				   same assembly level but not from another assembly.
+				   
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				   				   
+Multi threading - 
+
+   http://www.tutorialspoint.com/csharp/csharp_multithreading.htm				   
+				   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				   				   
+
+
+Diffrence between abstract class and interface
+
+
+
+Interface:
+
+Every single Method declared in an Interface will have to be implemented in the subclass. Only Events, Delegates, Properties (C#) and
+Methods can exist in a Interface. A class can implement multiple Interfaces.
+
+Abstract Class:
+
+Only Abstract methods have to be implemented by the subclass. An Abstract class can have normal methods with implementations. Abstract class can also 
+have class variables beside Events, Delegates, Properties and Methods. A class can only implement one abstract class only due non-existence of Multi-inheritance in C#.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				   				   				   
+				   
+Abstract Class -  Abstract classes are closely related to interfaces. They are classes that cannot be instantiated, and are frequently either partially implemented, 
+or not at all implemented. One key difference between abstract classes and interfaces is that a class may implement an unlimited number of interfaces, but may inherit 
+from only one abstract (or any other kind of) class. A class that is derived from an abstract class may still implement interfaces. Abstract classes are useful when creating 
+components because they allow you specify an invariant level of functionality in some methods, but leave the implementation of other methods until a specific implementation of
+ that class is needed. They also version well, because if additional functionality is needed in derived classes, it can be added to the base class without breaking code.
+-> An abstract class is denoted in Visual Basic by the keyword MustInherit. In C#, the abstract modifier is used. Any methods that are meant to be invariant may be coded into the
+ base class, but any methods that are to be implemented are marked in Visual Basic with the MustOverride modifier. In C#, the methods are marked abstract. 			   
+-> Abstract class consists of abstract methods and regular methods, all the abstract methods are implemented by the derived or sub methods.
+abstract class WashingMachine
+{
+   public WashingMachine()
+   {
+      // Code to initialize the class goes here.
+   }
+
+   abstract public void Wash();
+   abstract public void Rinse(int loadSize);
+   abstract public long Spin(int speed);
+}
+
+
+
+class MyWashingMachine : WashingMachine
+{
+   public MyWashingMachine()
+   {  
+      // Initialization code goes here.    
+   }
+
+   override public void Wash()
+   {
+      // Wash code goes here.
+   }
+
+   override public void Rinse(int loadSize)
+   {
+      // Rinse code goes here.
+   }
+
+   override public long Spin(int speed)
+   {
+      // Spin code goes here.
+   }
+}	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				   
+				   
+Ploymorphism -  C# compiler does not allow oveerriding it throws warnings
+				We have to use new and virtual keyword
+				In object-oriented programming paradigm, polymorphism is often expressed as 'one interface, multiple functions'.
+                 Polymorphism can be static or dynamic. In static polymorphism, the response to a function is determined at the compile time. In dynamic polymorphism,
+				 it is decided at run-time.
+				 
+				 Static Polymorphism - The mechanism of linking a function with an object during compile time is called early binding. It is also called static binding. 
+				 C# provides two techniques to implement static polymorphism. They are:
+				 
+				 http://www.akadia.com/services/dotnet_polymorphism.html
+				 Function overloading
+                 Operator overloading
+				 
+				 
+				 
+				 
+				 Function Overloading -
+				 
+				 
+								using System;
+								namespace PolymorphismApplication
+											{
+											   class Printdata
+											   {
+												  void print(int i)
+												  {
+													 Console.WriteLine("Printing int: {0}", i );
+												  }
+
+												  void print(double f)
+												  {
+													 Console.WriteLine("Printing float: {0}" , f);
+												  }
+
+												  void print(string s)
+												  {
+													 Console.WriteLine("Printing string: {0}", s);
+												  }
+												  static void Main(string[] args)
+												  {
+													 Printdata p = new Printdata();
+													 
+													 // Call print to print integer
+													 p.print(5);
+													 
+													 // Call print to print float
+													 p.print(500.263);
+													 
+													 // Call print to print string
+													 p.print("Hello C++");
+													 Console.ReadKey();
+												  }
+											   }
+											}
+											When the above code is compiled and executed, it produces the following result:
+
+											Printing int: 5
+											Printing float: 500.263
+											Printing string: Hello C++
+
+
+								
+				Dynamic Polymorphism - C# allows you to create abstract classes that are used to provide partial class implementation of an interface.
+				Implementation is completed when a derived class inherits from it. Abstract classes contain abstract methods, which are implemented by the derived class.
+				The derived classes have more specialized functionality.
+
+				Here are the rules about abstract classes:
+					-> You cannot create an instance of an abstract class
+					-> You cannot declare an abstract method outside an abstract class
+					-> When a class is declared sealed, it cannot be inherited, abstract classes cannot be declared sealed.								
+								
+								
+						using System;
+						namespace PolymorphismApplication
+									{
+									   abstract class Shape
+									   {
+										  public abstract int area();
+									   }
+									   class Rectangle:  Shape
+									   {
+										  private int length;
+										  private int width;
+										  public Rectangle( int a=0, int b=0)
+										  {
+											 length = a;
+											 width = b;
+										  }
+										  public override int area ()
+										  { 
+											 Console.WriteLine("Rectangle class area :");
+											 return (width * length); 
+										  }
+									   }
+
+									   class RectangleTester
+									   {
+										  static void Main(string[] args)
+										  {
+											 Rectangle r = new Rectangle(10, 7);
+											 double a = r.area();
+											 Console.WriteLine("Area: {0}",a);
+											 Console.ReadKey();
+										  }
+									   }
+									}
+									When the above code is compiled and executed, it produces the following result:
+
+									Rectangle class area :
+									Area: 70	
+								
+								
+								
+								
+								
+								
+								
+								
+										   
+				   
+				   
+				   
+				   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> Interface - It only contains the declaration (Signature) on methods and properties. 
+				A class that implements the interface must implement all of its methods.
+				
+											
+		interface ISampleInterface
+					{
+						void SampleMethod();
+					}
+
+					class ImplementationClass : ISampleInterface
+					{
+						// Explicit interface member implementation: 
+						void ISampleInterface.SampleMethod()
+						{
+							// Method implementation.
+						}
+
+						static void Main()
+						{
+							// Declare an interface instance.
+							ISampleInterface obj = new ImplementationClass();
+
+							// Call the member.
+							obj.SampleMethod();
+						}
+					}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> Overloading - Same Class name with diffrent parameters
+
+			EX -public class test
+							{
+								public void getStuff(int id)
+								{}
+								public void getStuff(string name)
+								{}
+							} 
+							
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> Overriding - Same class name with same parameters but diffrent implementation in child class.
+			Ex-public class test
+						{
+								public virtual void getStuff(int id)
+								{
+									//Get stuff default location
+								}
+						}
+
+						public class test2 : test
+						{
+								public override void getStuff(int id)
+								{
+									//base.getStuff(id);
+									//or - Get stuff new location
+								}
+						}
+						
+						
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Serialization:
+
+java.io.Serializable is the class which we have to extend.
+->Java provides a mechanism, called object serialization where an object can be represented as a sequence of bytes that includes the object's data as well as information 
+about the object's type and the types of data stored in the object.
+->After a serialized object has been written into a file, it can be read from the file and deserialized that is, the type information and bytes that represent the object
+and its data can be used to recreate the object in memory.
+->Most impressive is that the entire process is JVM independent, meaning an object can be serialized on one platform and deserialized on an entirely different platform.
+->Classes ObjectInputStream and ObjectOutputStream are high-level streams that contain the methods for serializing and deserializing an object.
+->The ObjectOutputStream class contains many write methods for writing various data types, but one method in particular stands out:
+
+public final void writeObject(Object x) throws IOException
+
+The above method serializes an Object and sends it to the output stream. Similarly, the ObjectInputStream class contains the following method for deserializing an object:
+
+public final Object readObject() throws IOException, ClassNotFoundException
+
+This method retrieves the next Object out of the stream and deserializes it. The return value is Object, so you will need to cast it to its appropriate data type.
+
+The finally block is used to clean up resources, particularly in the context of I/O.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exceptions in Java:
+
+Checked exceptions – 
+You must check and handle these in your program. For example, if you are using an API that has a method which declares that it could throw a checked exception
+,you must catch the exception each time you call that method. If you don’t, the compiler will notice and your program will not compile. The designers of the Java 
+wanted to encourage developers to use checked exceptions in situations from which programs may wish to recover: for example, if the host is down, the program may wish
+to try another address.
+
+-> IOException
+-> SQLException
+-> DataAccessException
+-> ClassNotFoundException
+-> InvocationTargetException
+-> MalformedURLException
+
+UnChecked exceptions - 
+on the other hand are not required to be handled or caught in the program. For example, if a method could throw unchecked exceptions, the caller of the method is not required 
+to handle or catch the exceptions.
+
+-> NullPointerException
+-> ArrayIndexOutOfBound
+-> IllegalArgumentException
+-> IllegalStateException
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Diffrence between Buffer and String Buffer -
+
+->Well, the most important difference between String and StringBuffer/StringBuilder in java is that String object is immutable whereas StringBuffer/StringBuilder objects are mutable.
+->By immutable, we mean that the value stored in the String object cannot be changed. Then the next question that comes to our mind is “If String is immutable then how am I able
+to change the contents of the object whenever I wish to?” . Well, to be precise it’s not the same String object that reflects the changes you do. Internally a new String object
+is created to do the changes.
+
+String Buffer -
+
+-> Well, since StringBuffer/StringBuilder objects are mutable, we can make changes to the value stored in the object. What this effectively means is that string operations 
+such as append would be more efficient if performed using StringBuffer/StringBuilder objects than String objects.
+->Finally, whats the difference between StringBuffer and StringBuilder?
+->StringBuffer and StringBuilder have the same methods with one difference and that’s of synchronization. StringBuffer is synchronized
+( which means it is thread safe and hence you can use it when you implement threads for your methods) whereas StringBuilder is not synchronized( which implies it isn’t thread safe).
+->So, if you aren’t going to use threading then use the StringBuilder class as it’ll be more efficient than StringBuffer due to the absence of synchronization.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Collections -
+
+-> Collections in java is a framework that provides an architecture to store and manipulate the group of objects.
+->All the operations that you perform on a data such as searching, sorting, insertion, manipulation, deletion etc. can be performed by Java Collections.
+->Java Collection simply means a single unit of objects. Java Collection framework provides many interfaces (Set, List, Queue, Deque etc.) and 
+classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet etc).
+
+1	public boolean add(Object element)	is used to insert an element in this collection.
+2	public boolean addAll(Collection c)	is used to insert the specified collection elements in the invoking collection.
+3	public boolean remove(Object element)	is used to delete an element from this collection.
+4	public boolean removeAll(Collection c)	is used to delete all the elements of specified collection from the invoking collection.
+5	public boolean retainAll(Collection c)	is used to delete all the elements of invoking collection except the specified collection.
+6	public int size()	return the total number of elements in the collection.
+7	public void clear()	removes the total no of element from the collection.
+8	public boolean contains(Object element)	is used to search an element.
+9	public boolean containsAll(Collection c)	is used to search the specified collection in this collection.
+10	public Iterator iterator()	returns an iterator.
+11	public Object[] toArray()	converts collection into array.
+12	public boolean isEmpty()	checks if collection is empty.
+13	public boolean equals(Object element)	matches two collection.
+14	public int hashCode()	returns the hashcode number for collection.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Store Key value pairs in java -
+
+public Object put(Object key, Object value)
+import java.util.Enumeration;
+import java.util.Hashtable;
+
+public class MainClass {
+  public static void main(String[] s) {
+    Hashtable table = new Hashtable();
+    table.put("key1", "value1");
+    table.put("key2", "value2");
+    table.put("key3", "value3");
+
+    Enumeration e = table.keys();
+    while (e.hasMoreElements()) {
+      String key = (String) e.nextElement();
+      System.out.println(key + " : " + table.get(key));
+    }
+  }
+}
+key3 : value3
+key2 : value2
+key1 : value1
+
+
+Enumeration -
+
+->An enumeration is a complete, ordered listing of all the items in a collection. The term is commonly used in mathematics and computer science to refer to a listing of all 
+of the elements of a set. The precise requirements for an enumeration (for example, whether the set must be finite, or whether the list is allowed to contain repetitions) 
+depend on the discipline of study and the context of a given problem.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Database Connections -
+
+Import Files-
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
+->The most commonly used form of getConnection() requires you to pass a database URL, a username, and a password:
+->Assuming you are using Oracle's thin driver, you'll specify a host:port:databaseName value for the database portion of the URL.
+->If you have a host at TCP/IP address 192.0.0.1 with a host name of amrood, and your Oracle listener is configured to listen on port 1521, and your database name is EMP,
+then complete database URL would be − jdbc:oracle:thin:@amrood:1521:EMP
+
+
+String host = "jdbc:derby://localhost:1527/Employees";
+String uName = "Your_Username_Here";
+String uPass= " Your_Password_Here ";
+
+
+Connection con= DriverManager.getConnection(host,uName,uPass)
+
+
+
+Using Driver Manage Class -
+
+public Connection getConnection() throws SQLException {
+
+    Connection conn = null;
+    Properties connectionProps = new Properties();
+    connectionProps.put("user", this.userName);
+    connectionProps.put("password", this.password);
+
+    if (this.dbms.equals("mysql")) {
+        conn = DriverManager.getConnection(
+                   "jdbc:" + this.dbms + "://" +
+                   this.serverName +
+                   ":" + this.portNumber + "/",
+                   connectionProps);
+    } else if (this.dbms.equals("derby")) {
+        conn = DriverManager.getConnection(
+                   "jdbc:" + this.dbms + ":" +
+                   this.dbName +
+                   ";create=true",
+                   connectionProps);
+    }
+    System.out.println("Connected to database");
+    return conn;
+}
+
+MySQL: jdbc:mysql://localhost:3306/, where localhost is the name of the server hosting your database, and 3306 is the port number
+
+Java DB: jdbc:derby:testdb;create=true, where testdb is the name of the database to connect to, and create=true instructs the DBMS to create the database.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+REST Webservice:
+
+->Client client = ClientBuilder.newClient();   //Create client 
+->WebTarget target = client.target("URL");   // Set target to client
+->System.out.println)(target.request(MediaType.TEXT_XML).get(String.class));  //Get Response
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Maven - An XML file describes the software project being built, its dependencies on other external modules and components, the build order, 
+directories, and required plug-ins. It comes with pre-defined targets for performing certain well-defined tasks such as compilation of code and its packaging. Maven dynamically 
+downloads Java libraries and Maven plug-ins from one or more repositories such as the Maven 2 Central Repository, and stores them in a local cache.
+
+->Maven is a build automation tool used primarily for Java projects. The word maven means "accumulator of knowledge" in Yiddish.[3] Maven addresses two aspects of building software:
+first, it describes how software is built, and second, it describes its dependencies. Contrary to preceding tools like Apache Ant, it uses conventions for the build procedure, 
+and only exceptions need to be written down. An XML file describes the software project being built, its dependencies on other external modules and components, the build order, 
+directories, and required plug-ins. It comes with pre-defined targets for performing certain well-defined tasks such as compilation of code and its packaging. Maven dynamically 
+downloads Java libraries and Maven plug-ins from one or more repositories such as the Maven 2 Central Repository, and stores them in a local cache.[4] 
+This local cache of downloaded artifacts can also be updated with artifacts created by local projects. Public repositories can also be updated.
+
+->Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. The Maven project is hosted by the Apache Software Foundation, where it 
+was formerly part of the Jakarta Project.
+
+->Maven is built using a plugin-based architecture that allows it to make use of any application controllable through standard input. Theoretically, this would allow anyone to
+write plugins to interface with build tools (compilers, unit test tools, etc.) for any other language. In reality, support and use for languages other than Java has been minimal. 
+Currently a plugin for the .NET framework exists and is maintained,[5] and a C/C++ native plugin is maintained for Maven 2.[6]
+
+->Alternative technologies like gradle and sbt as build tools do not rely on XML, but keep the key concepts Maven introduced. With Apache Ivy, a dedicated dependency manager
+was developed as well that also supports Maven repositories.[7]
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Types of Client Applications -
+
+->Stand-alone—A stand-alone client application, in its simplest form, is a Java program that has the Main public class that you invoke with the java command. 
+It runs completely separately from WebLogic Server.
+->A J2EE component deployed to WebLogic Server—In this type of client application, the Web Service invoke is part of the code that implements an EJB,
+servlet, or another Web Service. This type of client application, therefore, runs inside a WebLogic Server container.
+
+For importing webservices-
+->import javax.jws.WebService;
+
+
+Server program-
+package com.theopentutorials.ws.calc;
+import javax.jws.WebService;
+ 
+@WebService
+public class Calculator {
+    public int add(int a, int b) {
+        return (a + b);
+    }
+     Roles and responsibilities in 7 years
+ 
+->As a QA engineer I worked in Finance, Healthcare & Media Applications, Having good experience working with operating systems like Windows variants, UNIX, Linux, iOS. 
+->Most of the time I have been using Selenium Web Driver/RC/IDE/GRID, as primary automation tool and for mobile application testing both in android and IOS I have been 
+using tools like  Cucumber, Appium, See test, 
+->So most of the time involved In writing test cases , test strategies, test scenarios by understanding the business requirement document (BRD) and preparing frame work
+for the scenarios  and involved in test’s like GUI testing (Graphical user interface ), Web testing, Regression testing, User Acceptance Testing(UAT), Functional Testing, 
+System Testing, Integration Testing, End to End Testing, Unit Testing, Black Box Testing, White Box Testing, 
+->When ever I come across a bug I have used some defect tracking tools like Jira, HP ALM (Application lifecycle management), Bugzilla , HP QC(Quality center),
+So for web services I have used SOAP and REST by using SOAP UI
+->So far I have worked with methodologies like Agile-Scrum, Waterfall, V-Model, RUP and version controls like GitHub, Subversion, Tortoise, SVN and hands on experience
+with java and C# worked in environments that is Microsoft visual studios for C# and Eclipse IDE for Java  and performed cross browser testing on browsers like Mozilla Firefox,
+Internet Explorer, Safari, Google Chrome, Opera.
+->This is pretty much I was doing in 7 years’ career.
+    public int sub(int a, int b) {
+        return (a - b);
+    }
+     
+}
+
+
+Publish File-
+
+package com.theopentutorials.ws.calc.endpoint;
+ 
+import javax.xml.ws.Endpoint;
+import com.theopentutorials.ws.calc.Calculator;
+ 
+public class CalcEndpointPublisher {
+ 
+    public static void main(String[] args) {
+        Endpoint.publish("http://localhost:8080/CalcWS/Calculator",
+                        new Calculator());
+    }
+ 
+}
+
+Client File-
+
+package com.theopentutorials.ws.calc.client;
+ 
+import com.theopentutorials.ws.calc.Calculator;
+import com.theopentutorials.ws.calc.CalculatorService;
+ 
+public class CalcClient {
+ 
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 12;
+        CalculatorService calcService = new CalculatorService();
+        Calculator calc = calcService.getCalculatorPort();
+        System.out.println(a + " + " + b + " = " + calc.add(a, b));
+        System.out.println(a + " - " + b + " = " + calc.sub(a, b));
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Input -
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+a= Integer.parseInt(br.readLine());
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+List vs Set -
+
+->List is an ordered sequence of elements whereas Set is a distinct list of elements which is unordered.
+->List<E> - An ordered collection (also known as a sequence). The user of this interface has precise control over where in the list each element is inserted. 
+The user can access elements by their integer index (position in the list), and search for elements in the list.
+->Set<E> - A collection that contains no duplicate elements. More formally, sets contain no pair of elements e1 and e2 such that e1.equals(e2), and at most one null element. 
+As implied by its name, this interface models the mathematical set abstraction.
+
+╔═══════════════════╦══════════════════════╦═════════════════════════════╗
+║                   ║         List         ║            Set              ║
+╠═══════════════════╬══════════════════════╬═════════════════════════════╣
+║     Duplicates    ║          YES         ║            NO               ║
+╠═══════════════════╬══════════════════════╬═════════════════════════════╣
+║       Order       ║       ORDERED        ║  DEPENDS ON IMPLEMENTATION  ║
+╠═══════════════════╬══════════════════════╬═════════════════════════════╣
+║ Positional Access ║         YES          ║            NO               ║ 
+╚═══════════════════╩══════════════════════╩═════════════════════════════╝
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+LINUX - 
+
+-> ps -ef - To find all processes
+-> ps -ef | grep -vi - To find a particular process   
+-> kill -9 - Kill a particular process
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java provides the StringBuffer and String classes, and the String class is used to manipulate character strings that cannot be changed. Simply stated, objects of type String are read 
+only and immutable. The StringBuffer class is used to represent characters that can be modified.
+
+StringBuffer and StringBuilder have the same methods with one difference and that's of synchronization. StringBuffer is synchronized( which means it is thread safe and hence
+you can use it when you implement threads for your methods) whereas StringBuilder is not synchronized( which implies it isn't thread safe).
+
+
+
+
+
+
+
+CA LISA:
+
+User Interface (UI) testing is one of the most prevalent forms of software testing, however it is often approached from a manual "screen-level" testing perspective. 
+Increased automation of UI testing can provide important time savings and productivity gains to any QA organization, allowing an increased focus on new functionality 
+that needs to be validated.
+
+
+Codeless UI Recording and Testing :
+Testers can record and playback the entire Web UI testing workflow within a native browser emulation (IE, Firefox, Safari, etc.), and get sustainable test assets out of the process. 
+LISA captures all user actions, from mouse clicks and data entry, to drag-and-drop functions in the web UI, and then provides several ways to leverage that test, and add dynamic
+data validation points without needing to re-script the test.
+
+
+Maven - An XML file describes the software project being built, its dependencies on other external modules and components, the build order, 
+directories, and required plug-ins. It comes with pre-defined targets for performing certain well-defined tasks such as compilation of code and its packaging. Maven dynamically 
+downloads Java libraries and Maven plug-ins from one or more repositories such as the Maven 2 Central Repository, and stores them in a local cache.
+
+->Maven is a build automation tool used primarily for Java projects. The word maven means "accumulator of knowledge" in Yiddish.[3] Maven addresses two aspects of building software:
+first, it describes how software is built, and second, it describes its dependencies. Contrary to preceding tools like Apache Ant, it uses conventions for the build procedure, 
+and only exceptions need to be written down. An XML file describes the software project being built, its dependencies on other external modules and components, the build order, 
+directories, and required plug-ins. It comes with pre-defined targets for performing certain well-defined tasks such as compilation of code and its packaging. Maven dynamically 
+downloads Java libraries and Maven plug-ins from one or more repositories such as the Maven 2 Central Repository, and stores them in a local cache.[4] 
+This local cache of downloaded artifacts can also be updated with artifacts created by local projects. Public repositories can also be updated.
+
+->Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. The Maven project is hosted by the Apache Software Foundation, where it 
+was formerly part of the Jakarta Project.
+
+->Maven is built using a plugin-based architecture that allows it to make use of any application controllable through standard input. Theoretically, this would allow anyone to
+write plugins to interface with build tools (compilers, unit test tools, etc.) for any other language. In reality, support and use for languages other than Java has been minimal. 
+Currently a plugin for the .NET framework exists and is maintained,[5] and a C/C++ native plugin is maintained for Maven 2.[6]
+
+->Alternative technologies like gradle and sbt as build tools do not rely on XML, but keep the key concepts Maven introduced. With Apache Ivy, a dedicated dependency manager
+was developed as well that also supports Maven repositories.[7]
+
+
+
+Team Foundation Version Control
+
+TFVC is a centralized version control system allowing teams to store any type of artifact within its repository. TFVC supports two different types of workspaces when working 
+with client tools - Server Workspaces and Local Workspaces.[12] Server workspaces allow developers to lock files for check-out and provide notification to other developers that
+files are being edited. A frequent complaint for this model is that files on the development machine are marked as read-only. It also requires developers to "go offline" when 
+the server can't be contacted. Local workspaces were designed to avoid these problems. In a local workspace scenario files are not read-only and they do not have to be checked 
+out before working on them. As long as the files are on the developer's local machine, it doesn't matter if the server is connected or not. Conflicts are dealt with at check-in 
+time.
+To improve performance for remote clients, TFS includes the ability to install Proxy Servers.[13] Proxy servers allow source control contents to be cached at a site closer 
+to the developers to avoid long network trips and the associated latency. Check-ins are still performed directly against the TFS application tier so the Proxy Server is most 
+beneficial in read scenarios.
+
+As part of the source control engine, TFS supports a number of features to help developers ensure the code that is checked in follows configurable rules.
+This rule engine is called a Check-in Policy. There are several out of the box policies such as the Changeset Comments Policy which will not allow a check-in unless 
+the developer enters a check-in comment. These policies are extensible and can be used to examine all aspects of the code being checked in, the comments and the related
+work items. TFS also supports a Code Analysis feature that when used independently is known as FxCop. The inclusion in TFS means that the analysis can run against code 
+checked into the server and during automated builds.
+
+
+
+
+
+Git[edit]
+
+
+With the release of TFS 2013, Microsoft added native support for Git. This is not a Microsoft specific implementation but a standard implementation based on the libgit2[14] 
+library. This is the same library that powers the popular GitHub and the code is freely available from GitHub. Because Microsoft took the approach of using a standard library,
+any Git client can now be used natively with TFS (in other words, developers can use their favorite tools and never install the standard TFS clients). This allows tools 
+on any platform and any IDE that support Git to connect to TFS. For example, both Xcode and Android Studio support Git plug-ins. In addition, if developers do not want to
+use Microsoft's Team Explorer Everywhere plug-in for Eclipse, they can choose to use eGit[15] to connect to TFS.
+
+Using Git does not preclude the benefit of using TFS work item or build system. When checking code in with Git, referencing the work item ID in the check-in comment will
+associate the check-in with the given work item. Likewise, Team Build will also build Git projects.
+
+One of the major reasons to use TFS as a Git repository is that it is backed by SQL Server and is afforded the same protection as Team Foundation Version Control. 
+This gives developers some choices when choosing the type of project and work style that works best for them.
+
+At this time source code cannot be moved from a TFVC repository to a Git repository. However, using the Git-TF tool, a Git repo can be moved to a TFVC repository.[16]
+
+
+POM - We will seperate object repository with the tool.
+	  We will create a base class and the base class in base class we will specify all input controls
+	  We will use pi datatype
+	  We will have element locators and will specify the property
+	  we will take another class and this class will have methods and we will write automation scripts, we will use locators when ever we need.
+	  
+	  1) Have performed unit test using Python which is a high level dynamic programming language
+2) Created unit tests which is accomplished by subclassing unit test
+3) Used Doctest module searches for pieces of text that look like interactive Python sessions
+4) They are useful as an expressive documentation of the main usecase of a module and its components
+5) Used Nose that extends unit test  to make testing easier
+6) Used tox tool for automating test environment management and testing against multiple interpreter configurations

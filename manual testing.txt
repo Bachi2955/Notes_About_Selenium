@@ -1,0 +1,286 @@
+
+Why testing is required?
+Ans: 
+Testing is required for an effective performance of software application or product.
+It's important to ensure that the application should not result into any failures
+because it can be very expensive in the future or in the later stages of the development.
+It's required to stay in the business.
+
+
+2) What types of application we test
+Ans:
+
+
+
+3)what is SDLC and different phases in SDLC?
+Ans: Software development life cycle (SDLC) is a process to develop the application.
+
+Different phases like:
+
+Requirement Analysis and planning : Senior team members analyze the requirements/input given by customers/business users. They will check whether the requirement is feasible or not (can be done or not). They also identify the risks associated with project.
+
+Note: this high level requirements will be written in BRD (Business Requirement document) by Business Analyst
+
+Define/Design : in the define stage Business Analyst define more details about requirements (which are in BRD) in the form of SRS (software requirement specification) or Use Case diagram.
+As part of design, 
+Senior Developers write High Level Design Document (HLD)
+Developers write Low Level Design Document (LLD)
+Seniors Tester write Test Planning document
+
+Implementation/Development: Developers write the code for the requirements
+Testers write test cases as per SRS
+
+Testing : Execute the test cases what we prepared in previous stage
+
+Deployment : Release the tested code to production
+
+Maintenance : Support team monitoring the system that is running in production
+
+4) what is waterfal in SDLC?
+
+•	Advantages:
+•	Simple and easy to use. 
+•	Easy to manage due to the rigidity of the model. 
+•	each phase has specific deliverables and a review process. 
+•	Phases are processed and completed one at a time. 
+•	Works well for smaller projects where requirements are very well understood. 
+
+
+5)what is the process in agile model?
+
+•	Advantages:
+•	Not clear with requirements.
+•	Expect frequent changes.
+•	Quick relies 
+•	New technology.
+•	Scrum meetings.
+•	New type on project.
+
+
+6)what is scrum methodology?
+A Scrum process is distinguished from other agile processes by
+specific concepts and practices, divided into the three categories of Roles,
+Artifacts, and Time Boxes.
+These and other terms used in Scrum are defined below.
+Scrum is most often used to manage complex software and product development,
+using iterative and incremental practices. Scrum significantly increases productivity
+and reduces time to benefits relative to classic “waterfall” processes.
+Scrum processes enable organizations to adjust smoothly to rapidly-changing
+requirements, and produce a product that meets evolving business goals.
+
+7)what is daily standup meeting and what we discuss?
+Stand-Up meetings are a popular way to start the day for many product development teams.
+Usually they take around 15 minutes and are held standing up (surprise!).
+The idea is to keep the meeting short and to the point.
+With that in mind everybody goes through a routine of questions:
+
+What did I accomplish yesterday?
+What will I do today?
+What obstacles are impeding my progress?
+I’m a huge fan of Stand-Up meetings because they are an effective way to get everyone up to date and to identify potential roadblocks ahead. Less emails, less unfocused hour-long meetings, less interruptions, more flow time. As added bonus they are also great for onboarding new team members.
+
+
+8)what is user story/feature/sprint back log items and tasks in user story
+User story is BRD
+backlog items are things left to do.
+tak in remaning BDD.
+
+9)what is sprint planning and spring retro
+
+Sprint Pllaning:
+Sprint planning is a collaborative effort involving a ScrumMaster,
+who facilitates the meeting, a Product Owner, who clarifies the details
+of the product backlog items and their respective acceptance criteria,
+and the Entire Agile Team, who define the work and effort necessary to
+meet their sprint commitment.
+Each member of the team members answers the following questions:
+What worked well for us?
+What did not work well for us?
+What actions can we take to improve our process going forward?
+
+The Agile retrospective can be thought of as a "lessons learned" meeting.
+The team reflects on how everything went and then decides what changes they want
+to make in the next iteration. The retrospective is team-driven,
+and team members should decide together how the meetings will be run and how
+decisions will be made about improvements.
+
+
+10)what is burndown chart and velocity
+
+A burn down chart is a graphical representation of work left to do versus time.
+The outstanding work (or backlog) is often on the vertical axis,
+with time along the horizontal. That is, it is a run chart of outstanding work.
+It is useful for predicting when all of the work will be completed.
+
+The metric is calculated by reviewing work the team successfully completed during
+previous sprints; for example, if the team completed 10 stories during a two-week
+sprint and each story was worth 3 story points, then the team's velocity is 30
+story points per sprint.
+
+
+11)what is product backlog item and sprint backlog items
+
+The agile product backlog in Scrum is a prioritized features list,
+containing short descriptions of all functionality desired in the product.
+When applying Scrum, it's not necessary to start a project with a lengthy,
+upfront effort to document all requirements.
+
+
+
+12)what is user acceptance criteria test cases?
+User acceptance testing (UAT) is the last phase of the software testing process.
+During UAT, actual software users test the software to make sure it can handle
+required tasks in real-world scenarios, according to specifications.
+UAT is one of the final and critical software project procedures that must occur
+before newly developed software is rolled out to the market.
+
+13)what is v model?
+The advantage of V-Model is that it.s very easy to understand and apply.
+The simplicity of this model also makes it easier to manage.
+The disadvantage is that the model is not flexible to changes and just 
+in case there is a requirement change, which is very common in today.s
+dynamic world, it becomes very expensive to make the change.
+
+14)what is STLC?
+
+Requirement Analysis
+Test Planning
+Test Case Development
+Environment Setup
+Test Execution
+Test Cycle Closure
+
+
+15)what is defect?
+A defect is an error or a bug, in the application which is created.
+A programmer while designing and building the software can make mistakes or error.
+These mistakes or errors mean that there are flaws in the software. These are called defects. 
+
+how to rise a defect and what we specify while logging defect?
+
+defect lifecycle?
+
+Different types of testing?
+
+when do we use regression testing?
+
+when do we use integration testing?
+
+when do we use smoke testing and sanity testing?
+
+what is unit testing?
+
+what is UAT?
+
+what is alpha and beta testing?
+
+when do we use white box testing and block box testing?
+
+what we will do if we don’t have a time to test all stories?
+
+what we will do if come across any severity issue before release day?
+
+when do we use automation testing?
+
+what tester will do in each phase of SDLC?
+
+difference between load and performance testing?
+
+different types of non-functional testing types?
+
+what is test case?
+
+what is test plan/test strategy document
+Ans: Test plan document contains different section like
+        Types of testing : 
+        Exit and Entry criteria : 
+
+what is TDD and BDD (cucumber framework)
+
+what is priority and severity in defect?
+
+how to estimate test cases? 
+
+what is most challenge defect u came across? 
+
+how to deal the production defects?
+Ans: normally end user will report this issue. 
+        we need to talk to them and reproduce the issue with test logins 
+   Create defect in defect tool under the production release version
+   developers will fix the issue
+   we (QA) test the issue on production version code and release the fix to proudction after we verify
+  we have to create a defect on current sprint/release so that developer will add this code to the current sprint/release
+ 
+
+test design review steps
+
+if we dont have time to test call test cases what we will do
+
+how we learn the functionality of system?
+
+what are the tools to manage defects/stories?
+
+who will assign the work?
+
+types of test metrics we use normally
+
+what is traceability matrix?
+
+what are typical environments we have in projects
+
+what is development environment
+
+what is QA environment
+
+Q)what is production environment
+
+The production environment is also known as live, particularly for servers,
+as it is the environment that users directly interact with.
+Deploying to production is the most sensitive step; it may be done by deploying new code directly (overwriting old code,
+so only one copy is present at a time), or by deploying a configuration change.
+This can take various forms: deploying a parallel installation of a new version
+of code, and switching between them with a configuration change
+; deploying a new version of code with the old behavior and a feature flag,
+and switching to the new behavior with a configuration change that performs
+a flag flip; or by deploying separate servers (one running the old code, one the new)
+and redirecting traffic from old to new with a configuration change at the traffic
+routing level. These in turn may be done all at once or gradually, in phases.
+
+
+Q)what are different defect metrics and measurements we prepare
+
+
+A Metric is a quantitative measure of the degree to which a system, system component, or process possesses a given attribute. 
+
+Metrics can be defined as “STANDARDS OF MEASUREMENT”.
+
+Software Metrics are used to measure the quality of the project. Simply, Metric is a unit used for describing an attribute. Metric is a scale for measurement.
+
+Suppose, in general, “Kilogram” is a metric for measuring the attribute “Weight”. Similarly, in software, “How many issues are found in thousand lines of code?”, here No. of issues is one measurement & No. of lines of code is another measurement. Metric is defined from these two measurements.
+
+Test metrics example:
+
+How many defects are existed within the module?
+How many test cases are executed per person?
+What is the Test coverage %?
+
+
+what are weakness and strong points
+
+Q)What is staging environment?
+ANS)
+When ever we make a change to a page we can save it in draft mode or we can 
+publish those changes live.
+
+c panal account>> creat subdomains>>staging.abc.com>>> creat 
+C panal>>word press>>
+
+
+Staging (STAGE) is a pre-production environment, for final testing immediately prior to deploying to production. It seeks to mirror the actual production environment as closely as possible, and may connect to other production services and data, such as databases. For example, servers will be run on remote machines, rather than locally (as on a developer's workstation during dev, or on a single test machine during test), which tests the effect of networking on the system.
+
+The primary use of a staging environment is to test all installation/configuration/migration scripts and procedures, before they are applied to production environment. This ensures that all major and minor upgrades to the production environment will be completed reliably without errors, in minimum time.
+
+Another important use of staging is for performance testing, particularly load testing, as this often depends sensitively on the environment.
+
+
+

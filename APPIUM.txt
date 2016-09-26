@@ -1,0 +1,70 @@
+APPIUM:
+
+Webdriver + Mobile Featurs = Appium.
+
+Kindes of Applactions:
+---------------------
+Native apps : Pure mobile app  
+Mobile web apps :  EX:Crome 
+Hybrid web apps : both native and web (this is flexible to mobile app and Web apps)
+
+Appium is an open source (Free-ware), cross- Platform test automation tool for native, hybrid and 
+mobile apps, tested on simulators (IOS, FIRFOX OS), emulators (Android), and real devices (IOS, ANDROID, FIRFOXOS).
+
+Supported Platform:
+* IOS
+* ANDROID
+* FIRFOXOS
+
+
+Emulators:
+
+Simulators:
+
+
+Why Appium :
+
+1. We need to recompile our app or modify it in any way, due to use of standeard automation APIs on all
+platforms.
+
+2. WE can use any testing framework. EX:Junit,TestNG.
+
+3. You can write the code in any language supported by Webdriver. EX:Java,C#,Ruby,Python,PERL.
+
+4. If we use Apple's UIAutomation liberary without APPIUM you can only write tests using JavaScript
+and you can only run stests through the instruments application. similarly, with google's UIAutomator you can
+only write tests in java. APPIUM opens up the possibility of true cross-platform native mobile automation.
+
+
+Architecture of Appium:
+ 
+ Client/Server Architecture
+ 
+ Client (Any language) [ class Desired capabilities object] >>>>> Jason white protocall >>> Appium server >>>> mobile 
+
+ 
+ * Appium server will take the request as the section object (http secation object which is language independent).  
+ * Appium server has capabilaty of taking both IOS framework and Android framework.
+ 
+
+ 
+ 
+ Jars ---SDK
+Plugin --- ADT Plugin
+
+SDK & AVD-- Android virtual device
+
+
+9/10
+More over i am team player 
+
+I am extremely good with Implementation of QA testing strategy for Web based and Client/Server applications using Manual testing and Automation testing exclusively in functional testing both mobile and web using Selenium WebDriver/RC/IDE/GRID, Cucumber, and creating Scripts using JavaScript, VBScripts and Test Frameworks using Junit, ANT, MAVEN, TestNG, JENKINS. Proficient at using bug tracking tools like HP ALM and JIRA, Extensive experience working on web services, SOA, Soap, REST, WSDL, Web API, technologies using SOAP UI and POSTMAN. Expert in retrieving data from database information writing SQL Queries and transforming data to information as needed. Performed extensive Backend Testing of the applications using PL/SQL Queries. Sound Experience in Waterfall and fast paced Agile Development Environment. Experienced with various types of testing like GUI testing, Web testing, Regression testing, User Acceptance Testing(UAT), Functional Testing, System Testing, Integration Testing, End to End Testing, Unit Testing, Black Box Testing, White Box Testing, Documentation and Reporting. When I was working with "Big Lots" I extensively worked on Retail application which deals with sales and distribution. I was responcible to check the modules of sales and distribution by perfoming back-end testing and functionalaty testing with help of diferent testing tools as I mencioned above.   
+
+ 
+ 
+
+
+
+
+
+ 

@@ -1,0 +1,77 @@
+Note: practise with code
+
+what are limitations in selenium webdriver
+ex: theory only
+
+installing/configure selenium
+ex: write down steps
+
+what are different ways of locating elements in selenium
+ex : write code for all locators
+
+which is fastest way to identify elements in web page?
+ex: theory only
+
+what is absolute path and relative path in xpath
+ex: write code
+
+different types of waits or synchronization in selenium webdriver
+ex: write code
+
+how to save screen shots using selenium webdriver
+Ex: write code
+
+how to handle multiple windows in selenium webdriver
+Ex: write code
+
+how to lanuch webpage using chrome driver
+Ex: write code
+
+what is desired capabilities in selenium webdriver
+Ex: write code
+
+how to set language while opening website 
+Ex: write code
+
+how to handle windows based popups (upload and dropdown)
+Ex: write code
+
+write code to verify any application login page is working or not
+(u should write code to use textbox, button click events)
+Ex: write code
+
+how to select items from dropdown/select box
+Ex: write code
+
+how to know if checkbox is checked or not in webpage
+ex: write code
+
+tell me code to pass values from parent window to child window
+Ex: write code
+
+write code to find out if all links are working or not
+Ex: write code
+
+write code on how to use javascriptexecutor?
+Ex: write code
+
+difference between assert and verify?
+Ex: write code
+
+difference between driver.close and driver.quit methods?
+Ex: write code
+
+common exceptions in selenium?
+Ex: write code
+
+how to handle Ajax calls in selenium?
+Ex: write code
+
+we have webtable, need to click on second row from table.
+when we click on child will be populated. first column in primary column for each row.
+tell me steps to verify child form has proper data or not
+Ex: 
+
+How to assign the value to textbox other than sendkeys method?
+
+Selenium grid, how to execute scripts on multiple browser

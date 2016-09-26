@@ -1,0 +1,120 @@
+Java: (day one)
+Steps to install java
+Steps to install eclipse
+Steps to create workspace
+
+Steps to create project
+ File -> Project
+We call Project is program
+
+How to create .java file/class
+Project -> new class and give extension .java
+Class Employee {
+
+}
+
+how to create packages and what is best way to give name
+From solution explorer, select project, right click and select package
+Ex: companyname.projectname.foldername (this is common naming standard)
+
+what is main method will do?
+Main method is starting point of program
+
+What is variable?
+It will store the value in memory 
+To create variable we specify
+Variablename datatype;
+
+what is data type and different data types`
+It will represents what type of data 
+Int
+Double
+Float
+
+creating property/data members : we create properties at class level
+int salary
+String firstname
+
+creating method with void : we write methods in 
+void
+
+creating method with void and parameter
+
+creating method with return data type
+
+creating method with return data type and parameter
+
+creating variable
+
+
+
+creating static property All instances shared the value http://crunchify.com/java-static-methods-variables-static-block-and-class-with-example/
+
+creating static method
+http://crunchify.com/java-static-methods-variables-static-block-and-class-with-example/
+
+creating object
+
+calling method with no return
+
+calling method with no return and parameter
+
+calling method with return and no parameter
+
+calling method with return and parameter
+
+calling method with return and storing the return data
+
+calling static method
+
+using static property
+
+Java: Day2
+create classes under multiple packages
+
+calling classes under different packages
+
+write code to handle exceptions with try/catch/finally
+
+what is final keyword
+
+write code for interface and create class to implement that interface
+
+write code for creating abstract class
+
+implement method overloading
+
+implement method overriding
+implementing polymorphism
+
+implementing interface
+
+write a code to save data into excel file and read from excel file (POI and jexcel API)
+
+how to update the data into XML file and read data from XML file
+
+write code to add items to integer, string array
+
+write code to retrieve items from integer, string array
+
+write code to add items to ArrayList collection
+
+write code to retrieve items from arraylist (using for each loop_
+
+write code to add items HashMap
+
+write code to retrieve items HashMap
+
+Write code to add items to hashset
+
+Write code to retrieve items to hasset
+
+write code to connect to JDBC to get rows from employee table
+
+create Employee class
+
+Add employee class to list collection
+
+create method that return list of employee collection
+
+Difference between string, string buffer, string builder with example

@@ -1,0 +1,395 @@
+Q1>what are limitations in selenium webdriver
+
+ex:Selenium WebDriver: We can invoke browsers for testing.
+Selenium Grid : We can test our project multiple times.
+We can run test cases on multiple servers at same time.
+Selenium IDE : We can use this with out automation script. Record and playback.
+Selenium RC: We can control browsers locally or on other systems using any programming language and
+testing framework.
+
+>>Some limitations of Selenium Automation tool are as follows:
+It does not support and non web-based applications,
+it only supports web based applications.
+
+>>Its an open source tool so in case of any technical issues you need to rely
+on the selenium community forums to get your issue resolved.
+
+>>You need to know at least one of the supported language very well in order to
+automate your application successfully.
+
+>>No inbuilt reporting capability so you need plugins like JUnit and TestNG for test reports.
+
+>>Lot of challenges with IE browser.
+
+
+Q2>installing/configure selenium
+
+ex:
+Step 1: Install Java on your computer. Download and install the Java Software Development Kit (JDK). ...
+Step 2: Install Eclipses IDE. ...
+Step 3 – Download the Selenium Java Client Driver. ...
+Step 4: Create a New project in Eclipse: ...
+Step 5: Time to Code!!
+
+Q3>what are different ways of locating elements in selenium
+
+ex :
+1. By ID:
+in Java: driver.findElement(By.id("element id"))
+2. By CLASS:
+in Java: driver.findElement(By.className("element class"))
+3. By NAME:
+in Java: driver.findElement(By.name("element name"))
+4. By TAGNAME:
+in Java: driver.findElement(By.tagName("element html tag name"))
+5. By CSS Selector:
+in Java: driver.findElement(By.cssSelector("css selector"))
+6. By Link:
+in Java: driver.findElement(By.link("link text"))
+7. By XPath:
+in Java: driver.findElement(By.xpath("xpath expression"))
+
+Q4>which is fastest way to identify elements in web page?
+ex:
+
+In my opinion, the most accurate way is XPath as you can use XPath's
+to describe the exact position of an element within the DOM, however there are some instances where CSS locators work better than XPaths.
+
+Using selenium's ID locator is the most simple,
+but unless the element you are looking for has an ID not always useful.
+
+The biggest negative when using XPath's is the performance with Selenium RC and browsers
+with bad JavaScript rendering engines (Think IE6/IE7).
+Quite a bit of work has been dome to try and rectify this so if you use well formed XPath's that only search specific parts of the DOM this problem should be minimal. The Selenium webdriver implementation is much faster.
+
+The summary is really there is no one answer it depends what you want out of a locator,
+and which browsers you are testing. I personally use XPath in 99% of instances.
+
+I personally use XPath almost exclusively with the occasional CSS locator.
+
+Q5>what is absolute path and relative path in xpath
+ex:
+
+Relative is double slash //--- search for the element in dom (Document object module)
+Absolute is single slash / --- serch for the element in dev  
+
+Location path specifies the location of node in XML document. This path can be absolute
+or relative. If location path starts with root node
+or with '/' then it is an absolute path.
+
+Location path specifies the location of node in XML document.
+This path can be absolute or relative.
+If location path starts with the node that we've selected then it
+is an relative path.
+
+
+//Selenium WebDriver - Absolute and Relative Path Examples
+//Example Absolute and Relative Paths for Selenium WebDriver
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class AbsoluteRelativePaths {
+
+@Test
+public void absolutePath() throws InterruptedException {
+
+System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+  WebDriver driver = new ChromeDriver();
+  driver.get("E:\\Selenium\\absolute.html");
+
+  // Absolute Path starts from root path
+  WebElement link1 = driver.findElement(By.xpath("/html/body/li[@id='test']/a"));
+
+  // Relative Path starts from current path
+  WebElement link2 = driver.findElement(By.xpath(".//*[@id='test']/a"));
+
+  driver.quit();
+
+}
+
+}
+
+
+Q6>different types of waits or synchronization in selenium webdriver
+ex:
+Implicitlywait or uncoduiotional Synchronization
+driver.manage().timeouts().implicitlywait(10, Time.seconds);
+thread.sleep(5000);
+It will wi8 for 10 sec them move with execution.
+
+
+
+
+Explicitwait or conduiotional synchronization
+
+WebDriver driver = new FirefoxDriver();
+WebDriver myWaitVar = new WebDriverWait (driver, 10);
+
+It will start executing the script  as soon as the page gets loded
+ 
+
+Q7>how to save screen shots using selenium webdriver
+Ex:
+
+ This getScreenshotAs() method takes argument of type OutputType.
+ File or OutputType.BASE64 or Output.BYTES.
+ So that it could return captured screenshot
+ in File type, or Base 64 string type or in raw bytes.
+
+ 
+For File type
+File scrnshot= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+For Base64 string above code would be like
+((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
+
+For BYTES
+((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+
+We have taken the screenshot with the help of getScreenshotsAs() method and
+and now its time to copy this file somewhere in our file system or in our desktop.
+So for this purpose we further use copyFile() method of the FileUtils class from
+the org.apache.commons.io.FileUtils class.
+
+
+import java.io.File;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+public class Chrome {
+WebDriver driver;
+@BeforeMethod
+public void launchChrome()
+{
+System.setProperty("webdriver.chrome.driver", "E:\DD MISHRA\workspace\chromedriver_win_26.0.1383.0\chromedriver.exe");
+driver = new FirefoxDriver();
+driver.get("http://google.co.in");
+}
+@Test
+public void googleScreenshot()
+{
+try {
+File scrnsht =
+((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+FileUtils.copyFile(scrnsht, new
+File("e:\google_page.png"));
+} catch (Exception e) {
+e.printStackTrace();
+}
+}
+@AfterTest
+public void kill()
+{
+driver.close();
+}
+}
+ 
+Q8>how to handle multiple windows in selenium webdriver
+
+Set<String> AllWindowHandles = driver.getWindowHandles();
+driver.switchTo().window(window2);
+
+Ex:
+When we have multiple windows in test automation, all we need to do is switching the focus from one window to another. Let us understand the same in the following way:
+
+Window A has a link "Link1" and we need to click on the link (click event).
+
+Window B displays and we perform some actions. 
+
+The entire process can be fundamentally segregated into following steps:
+
+Step 1 : Clicking on Link1 on Window A
+
+A new Window B is opened.
+
+Step 2 : Save reference for Window A
+
+Step 3 : Create reference for Window B
+
+Step 3 : Move Focus from Window A to Window B
+
+Window B is active now
+
+Step 3 : Perform Actions on Window B
+
+Complete the entire set of Actions
+
+Step 4 : Move Focus from Window B to Window A
+
+Window A is active now
+
+Let us understand the same with a small coding example.
+
+ 
+
+import java.util.List;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class MultipleWindowsHandle {
+
+   
+     WebDriver driver;  
+     @Before  
+     public void setup() throws Exception {  
+     driver=new FirefoxDriver();  
+     String URL="http://www.seleniummaster.com";   
+     driver.get(URL);  
+     driver.manage().window().maximize();  
+     }  
+     @Test  
+     public void test() throws Exception {   
+     // Opening site  
+     driver.findElement(By.xpath("//img[@alt='SeleniumMasterLogo']")).click();  
+     // Storing parent window reference into a String Variable  
+     String Parent_Window = driver.getWindowHandle();    
+      // Switching from parent window to child window   
+     for (String Child_Window : driver.getWindowHandles())  
+     {  
+     driver.switchTo().window(Child_Window);  
+     // Performing actions on child window  
+     driver.findElement(By.id("dropdown_txt")).click();  
+     List  dropdownitems=driver.findElements(By.xpath("//div[@id='DropDownitems']//div"));  
+     int dropdownitems_Size=dropdownitems.size();  
+     System.out.println("Dropdown item size is:"+dropdownitems_Size);  
+     ((WebElement) dropdownitems.get(1)).click();  
+     driver.findElement(By.xpath("//*[@id='anotherItemDiv']")).click();  
+     }  
+     //Switching back to Parent Window  
+     driver.switchTo().window(Parent_Window);  
+     //Performing some actions on Parent Window  
+     driver.findElement(By.className("btn_style")).click();  
+     }  
+      @After  
+      public void close() {  
+      driver.quit();  
+      }   
+     } 
+
+
+
+Q9>how to lanuch webpage using chrome driver
+Ex:
+System.setProperty("webdriver.chrome.driver", 
+"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe");
+WebDriver driver=new ChromeDriver();
+driver.get("http://www.yahoo.com");
+
+Q10>what is desired capabilities in selenium webdriver
+Ex:
+The desired capability is a series of key/value pairs that stores the browser
+properties like browsername, browser version, the path of the browser driver in
+the system, etc. to determine the behaviour of the browser at run time.
+
+Desired capability can also be used to configure the driver instance of Selenium WebDriver.
+We can configure driver instance like FirefoxDriver, ChromeDriver, InternetExplorerDriver by using desired capabilities.
+Desired Capabilities are more useful in cases like:
+
+In mobile application automation, where the browser properties and the device properties can be set.
+In Selenium grid when we want to run the test cases on a different browser with different operating systems and versions.
+
+
+Different types of Desired Capabilities Methods
+Here we will see a different type of desired capabilities methods and see how to use one of this method "setCapability Method".
+
+getBrowserName()
+public java.lang.String getBrowserName()
+setBrowserName()
+public void setBrowserName(java.lang.String browserName)
+getVersion()
+public java.lang.String getVersion()
+setVersion()
+public void setVersion(java.lang.String version)
+getPlatform()
+public Platform getPlatform()
+setPlatform()
+public Platform getPlatform()
+getCapability Method
+The getCapability method of the Desired Capabilities class can be used to get the capability that is in use currently in the system.
+
+public java.lang.Object getCapability(java.lang.String capabilityName)
+setCapabilityMethod
+The setCapability() method of the Desired Capabilities class can be used to set the device name, platform version, platform name, absolute path of the app under test (the .apk file of the app(Android) under test), app Activity (in Android) and appPackage(java).
+
+"setCapability method" in java has the below declarations:
+
+setCapability : public void setCapability(java.lang.String capabilityName,boolean value)
+setCapability  :public void setCapability(java.lang.String capabilityName,java.lang.String value)
+setCapability  :public void setCapability(java.lang.String capabilityName,Platform value)
+setCapability  :public void setCapability(java.lang.String key,java.lang.Object value)
+
+
+Q11>how to set language while opening website 
+Ex:
+public WebDriver getDriver(String locale){   
+    System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
+    return new ChromeDriver();
+}
+
+public void initializeSelenium() throws Exception{
+    driver = getDriver("en-us")
+}
+
+
+Q12>how to handle windows based popups (upload and dropdown)
+
+Select class
+Ex: write code
+
+Q13>write code to verify any application login page is working or not
+(u should write code to use textbox, button click events)
+send keys 
+.click
+Ex: write code
+
+Q14>how to select items from dropdown/select box
+Ex: write code
+
+Q15>how to know if checkbox is checked or not in webpage
+ex: write code
+
+Q16>tell me code to pass values from parent window to child window
+Ex: write code
+
+Q17>write code to find out if all links are working or not
+Ex: write code
+
+Q18>write code on how to use javascript executor?
+Ex: write code
+
+Q19>difference between assert and verify?
+Ex: write code
+
+Q20>difference between driver.close and driver.quit methods?
+Ex: write code
+
+Q21>common exceptions in selenium?
+Ex: write code
+
+Q22>how to handle Ajax calls in selenium?
+Ex: write code
+
+we have webtable, need to click on second row from table.
+when we click on child will be populated. first column in primary column for each row.
+tell me steps to verify child form has proper data or not
+Ex: 
+
+Q23>How to assign the value to textbox other than sendkeys method?
+
+Q24>Selenium grid, how to execute scripts on multiple browser

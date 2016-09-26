@@ -1,0 +1,297 @@
+What is the diffecult situation you ever faced? How did you faced it?
+
+role 
+dynamic id 
+
+Inner join
+The most frequently used and important of the joins is the INNER JOIN. They are also referred to as an EQUIJOIN.
+
+The INNER JOIN creates a new result table by combining column values of two tables (table1 and table2) based upon the join-predicate. The query compares each row of table1 with each row of table2 to find all pairs of rows which satisfy the join-predicate. When the join-predicate is satisfied, column values for each matched pair of rows of A and B are combined into a result row.
+
+Syntax:
+The basic syntax of INNER JOIN is as follows:
+
+SELECT table1.column1, table2.column2...
+FROM table1
+INNER JOIN table2
+ON table1.common_field = table2.common_field;
+
+
+Left outer join
+
+The SQL LEFT JOIN returns all rows from the left table, even if there are no matches in the right table. This means that if the ON clause matches 0 (zero) records in right table, the join will still return a row in the result, but with NULL in each column from right table.
+
+This means that a left join returns all the values from the left table, plus matched values from the right table or NULL in case of no matching join predicate.
+
+Syntax:
+The basic syntax of LEFT JOIN is as follows:
+
+SELECT table1.column1, table2.column2...
+FROM table1
+LEFT JOIN table2
+ON table1.common_field = table2.common_field;
+
+Right outer join
+
+The SQL RIGHT JOIN returns all rows from the right table, even if there are no matches in the left table. This means that if the ON clause matches 0 (zero) records in left table, the join will still return a row in the result, but with NULL in each column from left table.
+
+This means that a right join returns all the values from the right table, plus matched values from the left table or NULL in case of no matching join predicate.
+
+Syntax:
+The basic syntax of RIGHT JOIN is as follows:
+
+SELECT table1.column1, table2.column2...
+FROM table1
+RIGHT JOIN table2
+ON table1.common_field = table2.common_field;
+
+
+The SQL FULL JOIN combines the results of both left and right outer joins.
+
+The joined table will contain all records from both tables, and fill in NULLs for missing matches on either side.
+
+Syntax:
+The basic syntax of FULL JOIN is as follows:
+
+SELECT table1.column1, table2.column2...
+FROM table1
+FULL JOIN table2
+ON table1.common_field = table2.common_field;
+
+The SQL SELF JOIN is used to join a table to itself as if the table were two tables, temporarily renaming at least one table in the SQL statement.
+
+Syntax:
+The basic syntax of SELF JOIN is as follows:
+
+SELECT a.column_name, b.column_name...
+FROM table1 a, table1 b
+WHERE a.common_field = b.common_field;
+
+
+The CARTESIAN JOIN or CROSS JOIN returns the Cartesian product of the sets of records from the two or more joined tables. Thus, it equates to an inner join where the join-condition always evaluates to True or where the join-condition is absent from the statement.
+
+Syntax:
+The basic syntax of CARTESIAN JOIN or CROSS JOIN is as follows:
+
+SELECT table1.column1, table2.column2...
+FROM  table1, table2 [, table3 ]
+
+
+
+
+
+
+
+
+SQL is followed by unique set of rules and guidelines called Syntax. This tutorial gives you a quick start with SQL by listing all the basic SQL Syntax:
+
+All the SQL statements start with any of the keywords like SELECT, INSERT, UPDATE, DELETE, ALTER, DROP, CREATE, USE, SHOW and all the statements end with a semicolon (;).
+
+Important point to be noted is that SQL is case insensitive, which means SELECT and select have same meaning in SQL statements, but MySQL makes difference in table names. So if you are working with MySQL, then you need to give table names as they exist in the database.
+
+All the examples given in this tutorial have been tested with MySQL server.
+SQL SELECT Statement:
+SELECT column1, column2....columnN
+FROM   table_name;
+SQL DISTINCT Clause:
+SELECT DISTINCT column1, column2....columnN
+FROM   table_name;
+SQL WHERE Clause:
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  CONDITION;
+SQL AND/OR Clause:
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  CONDITION-1 {AND|OR} CONDITION-2;
+SQL IN Clause:
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  column_name IN (val-1, val-2,...val-N);
+SQL BETWEEN Clause:
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  column_name BETWEEN val-1 AND val-2;
+SQL LIKE Clause:
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  column_name LIKE { PATTERN };
+SQL ORDER BY Clause:
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  CONDITION
+ORDER BY column_name {ASC|DESC};
+SQL GROUP BY Clause:
+SELECT SUM(column_name)
+FROM   table_name
+WHERE  CONDITION
+GROUP BY column_name;
+SQL COUNT Clause:
+SELECT COUNT(column_name)
+FROM   table_name
+WHERE  CONDITION;
+SQL HAVING Clause:
+SELECT SUM(column_name)
+FROM   table_name
+WHERE  CONDITION
+GROUP BY column_name
+HAVING (arithematic function condition);
+SQL CREATE TABLE Statement:
+CREATE TABLE table_name(
+column1 datatype,
+column2 datatype,
+column3 datatype,
+.....
+columnN datatype,
+PRIMARY KEY( one or more columns )
+);
+SQL DROP TABLE Statement:
+DROP TABLE table_name;
+SQL CREATE INDEX Statement :
+CREATE UNIQUE INDEX index_name
+ON table_name ( column1, column2,...columnN);
+SQL DROP INDEX Statement :
+ALTER TABLE table_name
+DROP INDEX index_name;
+SQL DESC Statement :
+DESC table_name;
+SQL TRUNCATE TABLE Statement:
+TRUNCATE TABLE table_name;
+SQL ALTER TABLE Statement:
+ALTER TABLE table_name {ADD|DROP|MODIFY} column_name {data_ype};
+SQL ALTER TABLE Statement (Rename) :
+ALTER TABLE table_name RENAME TO new_table_name;
+SQL INSERT INTO Statement:
+INSERT INTO table_name( column1, column2....columnN)
+VALUES ( value1, value2....valueN);
+SQL UPDATE Statement:
+UPDATE table_name
+SET column1 = value1, column2 = value2....columnN=valueN
+[ WHERE  CONDITION ];
+SQL DELETE Statement:
+DELETE FROM table_name
+WHERE  {CONDITION};
+SQL CREATE DATABASE Statement:
+CREATE DATABASE database_name;
+SQL DROP DATABASE Statement:
+DROP DATABASE database_name;
+SQL USE Statement:
+USE database_name;
+SQL COMMIT Statement:
+COMMIT;
+SQL ROLLBACK Statement:
+ROLLBACK;
+
+
+
+
+
+Use cases:
+Tables for employee management system
+Tables for Library management system
+Tables for Library management system
+
+
+SQL Commands:
+
+The standard SQL commands to interact with relational databases are
+CREATE, SELECT, INSERT, UPDATE, DELETE and DROP. These commands can be classified into groups based on their nature:
+
+
+DDL - Data Definition Language:
+
+Command	Description
+CREATE	Creates a new table, a view of a table, or other object in database
+ALTER	Modifies an existing database object, such as a table.
+DROP	Deletes an entire table, a view of a table or other object in the database.
+
+DML - Data Manipulation Language:
+Command	Description
+SELECT	Retrieves certain records from one or more tables
+INSERT	Creates a record
+UPDATE	Modifies records
+DELETE	Deletes records
+
+DCL - Data Control Language:
+Command	Description
+GRANT	Gives a privilege to user
+REVOKE	Takes back privileges granted from user
+
+
+What is RDBMS?
+
+>>A Relational database management system (RDBMS) is a database management system (DBMS) that is based on the relational model as introduced by E. F. Codd.
+
+What is field?
+
+>>Every table is broken up into smaller entities called fields. The fields in the CUSTOMERS table consist of ID, NAME, AGE, ADDRESS and SALARY.
+A field is a column in a table that is designed to maintain specific information about every record in the table.
+
+What is record or row?
+
+>>A record, also called a row of data, is each individual entry that exists in a table.
+For example there are 7 records in the above CUSTOMERS table. Following is a single row of data or record in the CUSTOMERS table:
+
+What is column?
+
+>>A column is a vertical entity in a table that contains all information associated with a specific field in a table.
+For example, a column in the CUSTOMERS table is ADDRESS, which represents location description and would consist of the following:
+
+What is NULL value?
+
+A NULL value in a table is a value in a field that appears to be blank, which means a field with a NULL value is a field with no value.
+It is very important to understand that a NULL value is different than a zero value or a field that contains spaces.
+A field with a NULL value is one that has been left blank during record creation.
+
+SQL Constraints?
+
+Constraints are the rules enforced on data columns on table.
+These are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the database.
+
+Constraints could be column level or table level. Column level constraints are applied only to one column where as table level constraints are applied to the whole table.
+
+Following are commonly used constraints available in SQL:
+
+NOT NULL Constraint: Ensures that a column cannot have NULL value.
+
+DEFAULT Constraint: Provides a default value for a column when none is specified.
+
+UNIQUE Constraint: Ensures that all values in a column are different.
+
+PRIMARY Key: Uniquely identified each rows/records in a database table.
+
+FOREIGN Key: Uniquely identified a rows/records in any another database table.
+
+CHECK Constraint: The CHECK constraint ensures that all values in a column satisfy certain conditions.
+
+INDEX: Use to create and retrieve data from the database very quickly.
+
+
+Unique VS Pimary Key ?
+
+Data Integrity:
+The following categories of the data integrity exist with each RDBMS:
+
+Entity Integrity: There are no duplicate rows in a table.
+
+Domain Integrity: Enforces valid entries for a given column by restricting the type, the format, or the range of values.
+
+Referential integrity: Rows cannot be deleted, which are used by other records.
+
+User-Defined Integrity: Enforces some specific business rules that do not fall into entity, domain or referential integrity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

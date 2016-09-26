@@ -1,0 +1,60 @@
+
+Reporting a bug in Jira
+
+>> It is not only bug tracking tool but also can be used for task management.
+>> It also support agile methodology.
+
+How to log bug using jira
+
+Give 
+Username 
+Password
+
+Login
+
+
+you will see system dashBord
+
+click creat
+You will see a form named creat issue
+
+Fill all the fields:
+
+Project >> Fight Management 
+Issue type >> Bug 
+summary >> Not able to send email from gmail account
+Steps to Reproduce:
+1 go to login page
+2 Enter correct credentials
+3 After login click on compose button 
+4 on Email compose page Enter CC, BCC and Subject
+5 Click on send button 
+
+Priority >>    Blocker/Critical/Minor/Trivial
+Components >>
+Affects Versions >> 1.0
+Enviroment>> google / IE / FF /
+Description >> 
+Original Estimate>>
+Remaining Estimate: While testing email functionallity of applaction, I entered TO,CC, BCC and Subject as I click on send button, getting error Message cannot be send" 
+Expected Result:Email Should send successfully
+Actule Result: We are getting Message cannot be sent
+
+--------------------------------------------------------------------------------------------
+Login  
+
+Projects >> view all projects
+
+Click on bug>>
+
+once the issue is raised it will be on dash bord
+
+s
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
